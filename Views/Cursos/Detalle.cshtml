@@ -1,0 +1,24 @@
+@model Curso
+@{
+    ViewData["Title"] = "Detalle del Curso";
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+@if (TempData["Exito"] != null)
+{
+    <div class="alert alert-success">@TempData["Exito"]</div>
+}
+
+<h2>@Model.Nombre</h2>
+<p><strong>Código:</strong> @Model.Codigo</p>
+<p><strong>Créditos:</strong> @Model.Creditos</p>
+<p><strong>Horario:</strong> @Model.HorarioInicio - @Model.HorarioFin</p>
+<p><strong>Cupo Máximo:</strong> @Model.CupoMaximo</p>
+
+<form method="post">
+    <input type="hidden" name="CursoId" value="@Model.Id" />
+    <button type="submit">Inscribirse</button>
+</form>

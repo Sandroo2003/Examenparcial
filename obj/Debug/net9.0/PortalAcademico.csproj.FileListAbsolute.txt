@@ -291,3 +291,4 @@ C:\Users\Sandro\PortalAcademico\obj\Debug\net9.0\refint\PortalAcademico.dll
 C:\Users\Sandro\PortalAcademico\obj\Debug\net9.0\PortalAcademico.pdb
 C:\Users\Sandro\PortalAcademico\obj\Debug\net9.0\PortalAcademico.genruntimeconfig.cache
 C:\Users\Sandro\PortalAcademico\obj\Debug\net9.0\ref\PortalAcademico.dll
+C:\Users\Sandro\PortalAcademico\obj\Debug\net9.0\PortalAcademico.sourcelink.json
