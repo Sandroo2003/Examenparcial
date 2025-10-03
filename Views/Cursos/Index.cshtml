@@ -1,0 +1,42 @@
+@model List<Curso>
+@{
+    ViewData["Title"] = "Catálogo de Cursos";
+}
+
+<h2>Catálogo de Cursos</h2>
+
+<form method="get">
+    <input type="text" name="nombre" placeholder="Nombre" />
+    <input type="number" name="minCreditos" placeholder="Mín Créditos" />
+    <input type="number" name="maxCreditos" placeholder="Máx Créditos" />
+    <input type="time" name="inicio" />
+    <input type="time" name="fin" />
+    <button type="submit">Filtrar</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Créditos</th>
+            <th>Horario</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var curso in Model)
+        {
+            <tr>
+                <td>@curso.Codigo</td>
+                <td>@curso.Nombre</td>
+                <td>@curso.Creditos</td>
+                <td>@curso.HorarioInicio - @curso.HorarioFin</td>
+                <td>
+                    <a href="#">Detalle</a> | 
+                    <a href="#">Inscribirse</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
